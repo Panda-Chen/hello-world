@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>js字符串截取</title>
+</head>
+
+<body>
+    <h3>js字符串截取</h3>
+    <section>
+        <h4 style="color: #ff0000;">1.substring()</h4>
+        <img src="substring.png">
+	</section>
+	<section>
+		<h4 style="color: #ff0000;">2.slice()</h4>
+		<img src="slice.png">
+	</section>
+	<section>
+		<h4 style="color: #ff0000;">2.substr()</h4>
+		<p>不推荐使用</p>
+	</section>
+	<p>tips：String对象的方法slice,substring,substr都可以返回字符串的指定部分，slice比substring要灵活一些，因为它允许使用负数作为参数，slice与substr有所不同，因为它用两个字符的位置来指定子串，而substr则用字符串位置和长度来指定子串。不推荐使用substr</p>
+</body>
+
+</html>
+
+
+<script type="text/javascript">
+	var a = 'hello 123';
+	var b = a.slice(0,a.length-1);//等价于a.slice(0,-1);
+	console.log(a);//hello 123
+	console.log(b);//hello 12
+	b = a.slice(-5,-1);//如果为负数，那么表示从尾部开始
+	console.log(b)//o 12
+</script>
