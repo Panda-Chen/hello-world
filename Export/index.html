@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>moduld.exports、exports、export、export default的区别</title>
+</head>
+
+<body>
+    <h3>moduld.exports、exports、export、export default的区别</h3>
+    <section>
+        <ol>
+            <li>module.exports和exports是属于CommonJS模块规范</li>
+            <li>export和export default是属于ES6语法</li>
+            <li>module.exports和exports导出模块，用require引入模块</li>
+            <li>export和export default导出模块，import导入模块</li>
+             <li>exports其实是module.exports的引用，可以直接在exports对象上添加相关的方法。var exports=module.exports</li>
+        </ol>
+    </section>
+    <section>
+        <ul>
+            <li>
+                <h4>CommonJS</h4>
+                <img src="module.exports.png">
+			</li>
+        </ul>
+    </section>
+    <section>
+        <ol>
+            <li>export与export default 均可用于导出常量、函数、文件、模块等</li>
+            <li>在一个文件或模块中，export可以有多个，export default仅有一个</li>
+            <li>通过export方式导出，在导入时需要加{},export default 则不需要，因为export输出多个值，export default则输出单个值</li>
+            <li>export与export default不要同时使用</li>
+        </ol>
+    </section>
+    <section>
+        <ul>
+            <li>
+                <h4>export使用示例</h4>
+                <img src="export1.png">
+			</li>
+            <li>
+                <h4>export也可以多次import，等价如下示例</h4>
+                <img src="export2.png">
+			</li>
+            <li>
+                <h4>export default使用示例</h4>
+                <img src="exportdefault.png">
+			</li>
+        </ul>
+    </section>
+</body>
+
+</html>
